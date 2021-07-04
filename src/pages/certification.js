@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { srConfig } from '@config';
@@ -129,7 +128,7 @@ const StyledTableContainer = styled.div`
   }
 `;
 
-const ArchivePage = ({ location, data }) => {
+const certification = ({ location, data }) => {
   const projects = data.allMarkdownRemark.edges;
   const revealTitle = useRef(null);
   const revealTable = useRef(null);
@@ -152,8 +151,8 @@ const ArchivePage = ({ location, data }) => {
 
       <main>
         <header ref={revealTitle}>
-          <h1 className="big-heading">Archive</h1>
-          <p className="subtitle">A big list of things I’ve worked on</p>
+          <h1 className="big-heading">Certifications</h1>
+          <p className="subtitle">A list of Certifications</p>
         </header>
 
         <StyledTableContainer ref={revealTable}>
@@ -216,17 +215,17 @@ const ArchivePage = ({ location, data }) => {
     </Layout>
   );
 };
-ArchivePage.propTypes = {
-  location: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
-};
+// certification.propTypes = {
+//   location: PropTypes.object.isRequired,
+//   data: PropTypes.object.isRequired,
+// };
 
-export default ArchivePage;
+export default certification;
 
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/projects/" } }
+      filter: { fileAbsolutePath: { regex: "/certification/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

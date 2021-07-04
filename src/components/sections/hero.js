@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { email } from '@config';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import Parallax from 'parallax-js';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -14,6 +16,9 @@ const StyledHeroSection = styled.section`
 
   @media (max-width: 480px) and (min-height: 700px) {
     padding-bottom: 10vh;
+    .Parellax {
+      display: none;
+    }
   }
 
   h1 {
@@ -46,6 +51,14 @@ const StyledHeroSection = styled.section`
 `;
 
 const Hero = () => {
+  useEffect(() => {
+    const scene = document.getElementById('scene');
+    const parallaxInstance = new Parallax(scene, {
+      relativeInput: true,
+    });
+    parallaxInstance.friction(0.4, 0.2);
+  }, []);
+
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -89,6 +102,28 @@ const Hero = () => {
         </>
       ) : (
         <TransitionGroup component={null}>
+          <div
+            className="Parellax"
+            style={{ position: 'absolute', justifyContent: 'right', alignItems: 'center' }}
+            id="scene">
+            <div data-depth="-0.2">
+              <StaticImage
+                src="../../images/parellax1.svg"
+                loading="lazy"
+                style={{ marginLeft: '30%' }}
+                alt="website logo"
+              />
+            </div>
+            <div data-depth="0.6">
+              <StaticImage
+                src="../../images/parellax2.svg"
+                loading="lazy"
+                style={{ marginLeft: '150%' }}
+                alt="website logo"
+              />
+            </div>
+          </div>
+
           {isMounted &&
             items.map((item, i) => (
               <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>

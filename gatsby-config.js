@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'BrittanyChiang',
-        short_name: 'BrittanyChiang',
+        name: 'Prajwal Raju P',
+        short_name: 'Prajwal',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
@@ -56,6 +56,13 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/content/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `certification`,
+        path: `${__dirname}/content/certification`,
       },
     },
     {
