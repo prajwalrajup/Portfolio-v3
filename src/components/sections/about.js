@@ -83,6 +83,7 @@ const StyledPic = styled.div`
       border-radius: var(--border-radius);
       mix-blend-mode: none;
       filter: none;
+      border: 2px solid transparent;
       transition: var(--transition);
     }
 
