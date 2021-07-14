@@ -27,7 +27,8 @@ const StyledContactSection = styled.section`
     }
 
     &:after {
-      display: none;
+      bottom: 0;
+      font-size: var(--fz-sm);
     }
   }
 

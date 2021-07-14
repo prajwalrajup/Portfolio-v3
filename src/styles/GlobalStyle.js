@@ -171,11 +171,11 @@ const GlobalStyle = createGlobalStyle`
       position: relative;
       bottom: 4px;
       counter-increment: section;
-      content: '0' counter(section) '.';
+      content: '<';
       margin-right: 10px;
       color: var(--green);
       font-family: var(--font-mono);
-      font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+      font-size: clamp(var(--fz-xl), 3vw, var(--fz-heading));
       font-weight: 400;
 
       @media (max-width: 480px) {
@@ -185,23 +185,19 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &:after {
-      content: '';
-      display: block;
       position: relative;
-      top: -5px;
-      width: 300px;
-      height: 1px;
-      margin-left: 20px;
-      background-color: var(--lightest-navy);
+      bottom: 4px;
+      counter-increment: section;
+      content: '/>';
+      margin-left: 10px;
+      color: var(--green);
+      font-family: var(--font-mono);
+      font-size: clamp(var(--fz-xl), 3vw, var(--fz-heading));
+      font-weight: 400;
 
-      @media (max-width: 1080px) {
-        width: 200px;
-      }
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-      @media (max-width: 600px) {
-        margin-left: 10px;
+      @media (max-width: 480px) {
+        margin-bottom: -3px;
+        margin-right: 5px;
       }
     }
   }
