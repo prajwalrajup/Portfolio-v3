@@ -161,7 +161,10 @@ const Nav = ({ isHome }) => {
   const Logo = (
     <div className="logo" tabIndex="-1">
       {isHome ? (
-        <a href="/" aria-label="home">
+        <a
+          onClick={() => window.gtag('event', 'page_scroll', { event: 'sdf' })}
+          href="/"
+          aria-label="home">
           <IconLogo />
         </a>
       ) : (
