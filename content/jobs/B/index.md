@@ -4,8 +4,8 @@ title: 'Full-Stack Intern'
 company: 'Sixinterns'
 location: 'Remote'
 range: 'Feb - March 2021'
-url: 'https://olaelectric.com/'
+url: ''
 ---
 
-- Built and deployed a Server-side Rendering (SSR) website for the company Sixintern using Node Next.js for front-end and Firebase as a back-end server. 
-- The website facilitates hiring and maintaining employees of the company. Increasing the productivity of by 25%.
+- Architected and deployed a dynamic Server-side Rendering (SSR) website for Sixintern using the Next.js framework for the front-end and Firebase as the back-end server.
+- The website streamlined employee hiring and management processes, leading to a 25% increase in productivity. Demonstrated expertise in web development, server-side programming, and project delivery.

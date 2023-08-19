@@ -7,7 +7,7 @@ module.exports = {
       'Prajwal Raju P is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
     siteUrl: 'https://brittanychiang.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@prajwalrajup1',
+    twitterUsername: '@Prajwal_Raju_P',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
